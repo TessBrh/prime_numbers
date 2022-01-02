@@ -2,13 +2,11 @@
 
 using namespace std;
 
-int checkN(int x, int y) {
-    int z = x%y;
-    return z;
-}
-
 int main() {
-    int limit = 100;
+    int limit;
+    cout << "Type a limit: ";
+    cin >> limit;
+    cout << "\n";
     for (int x = 1; x <= limit; x++) {
         //cout << "x is equal to: " <<x <<"\n";
         for (int y = 2; y <= limit; y++) {
