@@ -1,25 +1,18 @@
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
-int main() {
+int main()
+{
     int limit;
-    cout << "Type a limit: ";
+    cout << "Input a max limit for the prime numbers: \n";
     cin >> limit;
     cout << "\n";
-    for (int x = 1; x <= limit; x++) {
-        for (int y = 2; y <= limit; y++) {
-            if (x != y){
-                if (x%y == 0) {
-                    break;
-                }
-            }
-            else if (x == y) {
-                cout << x <<"\n";
-                break;
-            }
-        }
+    for (int x = 1, result = 1; result <= limit; x++) {
+        int y = x-1;
+        result = pow(x,2) - pow(y,2);
+        cout<<result<<endl;
     }
-    
     return 0;
 }
